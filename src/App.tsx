@@ -8,7 +8,7 @@ import { assetUrl, routeUrl } from "./data/assets";
 import { pricing, services } from "./data/services";
 import type React from "react";
 
-const contactPlaceholder = "Final Cloudflare email coming soon";
+const requestEmail = "hello@workwithsnow.com";
 
 function PageShell({ children }: { children: React.ReactNode }) {
   return (
@@ -201,8 +201,8 @@ function IntakeCTA() {
       <Sparkles />
       <h2>Send one file. See the difference.</h2>
       <p>
-        The site is ready for a Cloudflare Pages preview now. Final email, upload handling, and the
-        custom domain can be connected after Michael approves the preview.
+        Start with a PDF, invoice, scan, or messy spreadsheet. You will get a clear next step before
+        any work begins.
       </p>
       <a className="button primary" href={routeUrl("/intake")}>
         Start a request
@@ -341,8 +341,8 @@ function ServiceDetailPage({
         <div className="panel">
           <h2>What is not included</h2>
           <p>
-            No guessing unreadable source data, no public file storage, no payment handling, and no
-            sensitive-data intake until Michael approves the final workflow.
+            This service does not include bookkeeping, legal review, tax advice, or guessing values
+            that cannot be read from the source file.
           </p>
         </div>
       </section>
@@ -357,7 +357,7 @@ function IntakePage() {
       <SubpageHero
         eyebrow="Intake"
         title="Tell us what needs cleaning."
-        body="The intake path is ready for launch preview. Final email, upload handling, and Cloudflare routing will be connected after Michael configures the domain and email."
+        body="Share the project details, file type, rough size, deadline, and the format you want back."
       />
       <section className="section intake-layout">
         <form className="intake-form" action="mailto:" method="post" encType="text/plain">
@@ -380,12 +380,12 @@ function IntakePage() {
           <div className="upload-note">
             <strong>Upload instruction</strong>
             <p>
-              Do not upload sensitive files here yet. Once the final Cloudflare email is configured,
-              email the file and request details through the approved intake address.
+              Email the file and request details to {requestEmail}. Avoid sending highly sensitive
+              information unless the project scope has been confirmed first.
             </p>
           </div>
           <button className="button primary" type="button">
-            {contactPlaceholder}
+            Email {requestEmail}
           </button>
         </form>
         <aside className="panel">
@@ -422,8 +422,8 @@ function PrivacyPage() {
       paragraphs={[
         "Snow Digital Services collects the information needed to understand and complete a requested service, such as name, contact details, project notes, and submitted files.",
         "Submitted files are used to complete the requested work. Files are not sold.",
-        "Customers should not submit highly sensitive personal, medical, financial, or regulated data unless Michael has approved the workflow in advance.",
-        "Deletion or correction requests can be handled through the final contact email once Michael configures it in Cloudflare."
+        "Customers should avoid submitting highly sensitive personal, medical, financial, or regulated data unless the project scope has been confirmed first.",
+        `Deletion or correction requests can be sent to ${requestEmail}.`
       ]}
     />
   );
@@ -438,7 +438,7 @@ function TermsPage() {
         "Each job should have a confirmed scope before work begins, including source files, requested output, turnaround expectations, and revision limits.",
         "Customers retain ownership of the content and files they submit. Snow Digital Services delivers cleaned files based on those submitted materials.",
         "Unclear source data may be flagged rather than guessed. Revisions are limited to items within the agreed scope.",
-        "Snow Digital Services does not guarantee business outcomes. Payment and refund terms should be finalized by Michael before public launch."
+        "Snow Digital Services does not guarantee business outcomes. Payment, refund, and revision terms should be confirmed before work begins."
       ]}
     />
   );
@@ -455,7 +455,7 @@ function TextPage({
 }) {
   return (
     <PageShell>
-      <SubpageHero eyebrow={eyebrow} title={title} body="These pages are starter launch drafts and should be reviewed before a final public domain is connected." />
+      <SubpageHero eyebrow={eyebrow} title={title} body="Plain-language launch policies for small digital cleanup projects." />
       <section className="section text-panel">
         {paragraphs.map((paragraph) => (
           <p key={paragraph}>{paragraph}</p>
@@ -479,7 +479,7 @@ function FAQ() {
   const faqs = [
     ["What files are accepted?", "PDFs, scans, invoices, reports, tables, CSVs, and messy spreadsheets are good starting points."],
     ["Do you guess unclear values?", "No. Unreadable or uncertain values are flagged for review."],
-    ["Is there a backend upload system?", "Not in v1. The public site uses an honest static intake path until Michael approves the final Cloudflare workflow."]
+    ["How do I send the file?", `Start with the intake page and email the file details to ${requestEmail}.`]
   ];
   return (
     <section className="section">
