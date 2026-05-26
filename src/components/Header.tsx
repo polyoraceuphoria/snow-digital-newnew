@@ -1,5 +1,5 @@
 import { ArrowRight } from "./Icons";
-import { assetUrl } from "../data/assets";
+import { assetUrl, routeUrl } from "../data/assets";
 
 const links = [
   { href: "/services", label: "Services" },
@@ -10,7 +10,7 @@ const links = [
 export function Header() {
   return (
     <header className="site-header">
-      <a className="brand" href="/" aria-label="Snow Digital Services home">
+      <a className="brand" href={routeUrl("/")} aria-label="Snow Digital Services home">
         <img src={assetUrl("assets/site/cloud-mascot.webp")} alt="" />
         <span>
           <strong>snow</strong>
@@ -19,12 +19,12 @@ export function Header() {
       </a>
       <nav aria-label="Primary navigation">
         {links.map((link) => (
-          <a key={link.href} href={link.href}>
+          <a key={link.href} href={routeUrl(link.href)}>
             {link.label}
           </a>
         ))}
       </nav>
-      <a className="header-cta" href="/intake">
+      <a className="header-cta" href={routeUrl("/intake")}>
         Start a request
         <ArrowRight />
       </a>

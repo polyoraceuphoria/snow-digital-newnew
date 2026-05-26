@@ -4,7 +4,7 @@ import { Check, Sparkles } from "./components/Icons";
 import { PricingCard } from "./components/PricingCard";
 import { SectionDivider } from "./components/SectionDivider";
 import { ServiceCard } from "./components/ServiceCard";
-import { assetUrl } from "./data/assets";
+import { assetUrl, routeUrl } from "./data/assets";
 import { pricing, services } from "./data/services";
 import type React from "react";
 
@@ -52,10 +52,10 @@ function Hero() {
           review-ready files, starting with PDF-to-Excel conversion.
         </p>
         <div className="hero-actions">
-          <a className="button primary" href="/services/pdf-to-excel">
+          <a className="button primary" href={routeUrl("/services/pdf-to-excel")}>
             Start with PDF-to-Excel
           </a>
-          <a className="button secondary" href="/services">
+          <a className="button secondary" href={routeUrl("/services")}>
             View services
           </a>
         </div>
@@ -140,7 +140,7 @@ function Home() {
               </li>
             ))}
           </ul>
-          <a className="button primary" href={pdf.href}>
+          <a className="button primary" href={routeUrl(pdf.href)}>
             See PDF-to-Excel details
           </a>
         </div>
@@ -204,7 +204,7 @@ function IntakeCTA() {
         The site is ready for a Cloudflare Pages preview now. Final email, upload handling, and the
         custom domain can be connected after Michael approves the preview.
       </p>
-      <a className="button primary" href="/intake">
+      <a className="button primary" href={routeUrl("/intake")}>
         Start a request
       </a>
     </section>
@@ -523,6 +523,11 @@ const routes: Record<string, React.ReactNode> = {
 };
 
 export default function App() {
-  const path = window.location.pathname.replace(/\/$/, "") || "/";
+  const basePath = new URL(import.meta.env.BASE_URL, window.location.origin).pathname;
+  let path = window.location.pathname;
+  if (basePath !== "/" && path.startsWith(basePath)) {
+    path = `/${path.slice(basePath.length)}`;
+  }
+  path = path.replace(/\/$/, "") || "/";
   return routes[path] ?? <NotFound />;
 }
