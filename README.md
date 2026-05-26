@@ -34,6 +34,16 @@ npm run preview
 
 The final custom domain and email are intentionally left TBD for Michael to configure in Cloudflare.
 
+## Design Direction
+
+The site keeps the Snow/Manus softness while tightening the experience toward a hyperminimal, conversion-focused standard:
+
+- Clear PDF-to-Excel positioning.
+- Minimal navigation.
+- One primary request path.
+- Trust built through scope, delivery, and quality standards instead of fake social proof.
+- Soft brand visuals used as accents rather than clutter.
+
 Direct upload, after Cloudflare auth is available:
 
 ```bash

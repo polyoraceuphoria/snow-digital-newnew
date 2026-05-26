@@ -79,7 +79,7 @@ textarea {
 
 .snowfall span {
   animation: snowfall var(--duration) linear var(--delay) infinite;
-  background: rgba(168, 216, 234, 0.28);
+  background: rgba(168, 216, 234, 0.18);
   border-radius: 999px;
   height: var(--size);
   left: var(--x);
@@ -127,13 +127,18 @@ textarea {
 
 .site-header {
   align-items: center;
+  backdrop-filter: blur(18px);
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(168, 216, 234, 0.14);
+  border-radius: 999px;
   display: flex;
   gap: 24px;
   justify-content: space-between;
-  margin: 0 auto;
+  margin: 18px auto 0;
   max-width: 1200px;
-  padding: 24px 24px 12px;
-  position: relative;
+  padding: 12px 14px 12px 18px;
+  position: sticky;
+  top: 14px;
   z-index: 5;
 }
 
@@ -253,10 +258,10 @@ textarea {
 .hero {
   align-items: center;
   display: grid;
-  grid-template-columns: minmax(0, 0.98fr) minmax(340px, 1.02fr);
-  gap: 48px;
-  min-height: 690px;
-  padding-top: 72px;
+  grid-template-columns: minmax(0, 1fr) minmax(340px, 0.92fr);
+  gap: 64px;
+  min-height: 650px;
+  padding-top: 82px;
 }
 
 .section-label {
@@ -282,7 +287,7 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(3rem, 6.8vw, 5.6rem);
+  font-size: clamp(3rem, 6.2vw, 5.15rem);
   letter-spacing: 0;
   line-height: 0.98;
   margin-bottom: 24px;
@@ -309,6 +314,10 @@ h3 {
   max-width: 680px;
 }
 
+.hero-lede {
+  max-width: 620px;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -320,6 +329,7 @@ h3 {
   color: var(--muted);
   font-size: 0.95rem;
   font-weight: 650;
+  max-width: 520px;
 }
 
 .hero-art {
@@ -333,6 +343,48 @@ h3 {
   min-height: 440px;
   overflow: hidden;
   position: relative;
+}
+
+.conversion-strip {
+  display: grid;
+  gap: 1px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: -34px auto 30px;
+  max-width: 1120px;
+  overflow: hidden;
+  padding: 0 24px;
+  position: relative;
+  z-index: 4;
+}
+
+.conversion-strip article {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(168, 216, 234, 0.16);
+  box-shadow: 0 18px 48px rgba(26, 26, 46, 0.045);
+  padding: 24px;
+}
+
+.conversion-strip article:first-child {
+  border-radius: 24px 0 0 24px;
+}
+
+.conversion-strip article:last-child {
+  border-radius: 0 24px 24px 0;
+}
+
+.conversion-strip strong {
+  color: var(--ink);
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.conversion-strip p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 620;
+  line-height: 1.55;
+  margin: 0;
 }
 
 .cloud-float {
@@ -620,7 +672,7 @@ h3 {
   display: flex;
   gap: 12px;
   justify-content: center;
-  padding: 18px 24px;
+  padding: 10px 24px;
   position: relative;
   z-index: 3;
 }
@@ -630,7 +682,7 @@ h3 {
   background: var(--blue);
   border-radius: 999px;
   height: 6px;
-  opacity: 0.4;
+  opacity: 0.24;
   width: 6px;
 }
 
@@ -650,9 +702,9 @@ h3 {
 
 .section-divider img {
   animation: gentle-bob 3s ease-in-out infinite;
-  height: 54px;
+  height: 44px;
   mix-blend-mode: multiply;
-  width: 54px;
+  width: 44px;
 }
 
 .divider-icon {
@@ -861,7 +913,9 @@ h3 {
 
 @media (max-width: 920px) {
   .site-header {
+    border-radius: 28px;
     flex-wrap: wrap;
+    margin-inline: 18px;
   }
 
   .site-header nav {
@@ -894,6 +948,17 @@ h3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .conversion-strip {
+    grid-template-columns: 1fr;
+    margin-top: 0;
+  }
+
+  .conversion-strip article,
+  .conversion-strip article:first-child,
+  .conversion-strip article:last-child {
+    border-radius: 22px;
+  }
+
   .footer-top,
   .footer-bottom {
     align-items: flex-start;
@@ -902,8 +967,14 @@ h3 {
 }
 
 @media (max-width: 640px) {
+  .snowfall {
+    display: none;
+  }
+
   .site-header {
     padding-inline: 18px;
+    position: relative;
+    top: auto;
   }
 
   .site-header nav {

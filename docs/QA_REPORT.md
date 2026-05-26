@@ -4,6 +4,7 @@
 
 - Desktop layout: verified in local browser preview at `http://127.0.0.1:4173/`; hero collision was found and fixed.
 - Mobile layout: verified at 390x844 viewport; headline word clipping was found and fixed.
+- Hyperminimal refinement pass: desktop and mobile browser screenshots rechecked after header, hero, trust strip, and copy updates.
 - Link check: required routes returned HTTP 200 locally.
 - CTA check: header, hero, service cards, pricing/service flows, and intake CTA route correctly.
 - Intake check: static intake path implemented; final email still TBD and clearly disclosed.

@@ -23,7 +23,7 @@ function PageShell({ children }: { children: React.ReactNode }) {
 function Snowfall() {
   return (
     <div className="snowfall" aria-hidden="true">
-      {Array.from({ length: 24 }).map((_, index) => (
+      {Array.from({ length: 12 }).map((_, index) => (
         <span
           key={index}
           style={
@@ -44,11 +44,11 @@ function Hero() {
   return (
     <section className="hero">
       <div className="hero-copy">
-        <p className="section-label">Your friendly digital cleanup studio</p>
+        <p className="section-label">PDF-to-Excel cleanup</p>
         <h1>Send the messy file. Get back a clean spreadsheet.</h1>
         <p className="hero-lede">
-          Snow Digital Services turns PDFs, invoices, spreadsheets, and document tasks into clean,
-          usable deliverables, starting with PDF-to-Excel conversion.
+          Snow Digital Services turns PDFs, invoices, scans, and messy spreadsheets into clean,
+          review-ready files, starting with PDF-to-Excel conversion.
         </p>
         <div className="hero-actions">
           <a className="button primary" href="/services/pdf-to-excel">
@@ -59,7 +59,7 @@ function Hero() {
           </a>
         </div>
         <p className="microcopy">
-          Clear scopes. Clean files. Fast turnaround. Unclear values are flagged, not guessed.
+          Clear scope. Clean file. Unclear values flagged, not guessed.
         </p>
       </div>
       <div className="hero-art" aria-label="Snow Digital winter illustration">
@@ -69,10 +69,28 @@ function Hero() {
           <strong>→ clean.xlsx</strong>
         </div>
         <div className="file-card card-two">
-          <span>Rows organized</span>
-          <strong>Fields flagged</strong>
+          <span>XLSX / CSV</span>
+          <strong>Ready to review</strong>
         </div>
       </div>
+    </section>
+  );
+}
+
+function ConversionStrip() {
+  const items = [
+    ["Scope first", "Page count, file type, and output format are confirmed before work starts."],
+    ["Clean delivery", "Rows, columns, labels, and obvious formatting issues are handled."],
+    ["No guessing", "Unreadable values are called out clearly for review."]
+  ];
+  return (
+    <section className="conversion-strip" aria-label="Service standards">
+      {items.map(([title, body]) => (
+        <article key={title}>
+          <strong>{title}</strong>
+          <p>{body}</p>
+        </article>
+      ))}
     </section>
   );
 }
@@ -82,14 +100,14 @@ function Home() {
   return (
     <PageShell>
       <Hero />
-      <SectionDivider cloud />
+      <ConversionStrip />
       <section className="section">
         <div className="section-heading">
           <p className="section-label">What We Do</p>
-          <h2>The Magic Workshop</h2>
+          <h2>Clean work, clearly scoped.</h2>
           <p>
-            Simple services, beautifully delivered. PDF-to-Excel is the fastest place to start, with
-            related cleanup lanes ready when the work expands.
+            PDF-to-Excel is the main path. The other lanes stay available for the practical cleanup
+            work that often comes with it.
           </p>
         </div>
         <div className="service-grid">
@@ -102,7 +120,7 @@ function Home() {
       <section className="section feature-section">
         <div className="feature-copy">
           <p className="section-label">Flagship Service</p>
-          <h2>PDF-to-Excel is the fastest place to start.</h2>
+          <h2>A cleaner spreadsheet without the back-and-forth.</h2>
           <p>
             Send a PDF, scan, invoice, table, or messy document. Receive a clean spreadsheet with
             columns labeled, rows organized, and unclear values flagged.
@@ -134,7 +152,7 @@ function Home() {
       <section className="section soft-section">
         <div className="section-heading">
           <p className="section-label">Pricing Preview</p>
-          <h2>Clean starting points</h2>
+          <h2>Transparent starting points.</h2>
           <p>Complex, handwritten, low-resolution, or custom-format jobs may require a custom quote.</p>
         </div>
         <div className="pricing-grid">
@@ -161,7 +179,7 @@ function ProcessSection() {
     <section className="section">
       <div className="section-heading">
         <p className="section-label">How It Works</p>
-        <h2>Easy as 1, 2, 3, then reviewed</h2>
+        <h2>Simple, scoped, reviewed.</h2>
       </div>
       <div className="process-grid">
         {steps.map(([number, title, body]) => (
@@ -180,10 +198,10 @@ function IntakeCTA() {
   return (
     <section className="final-cta">
       <Sparkles />
-      <h2>Ready to clean up a file?</h2>
+      <h2>Send one file. See the difference.</h2>
       <p>
-        The final email/domain will be wired up in Cloudflare. For now, the site is ready for a
-        Cloudflare Pages preview and a clear intake path.
+        The site is ready for a Cloudflare Pages preview now. Final email, upload handling, and the
+        custom domain can be connected after Michael approves the preview.
       </p>
       <a className="button primary" href="/intake">
         Start a request
@@ -197,8 +215,8 @@ function ServicesPage() {
     <PageShell>
       <SubpageHero
         eyebrow="Services"
-        title="Clean data, clean copy, clean delivery."
-        body="PDF-to-Excel leads the offer. The other lanes are here for practical cleanup work that often comes with it."
+        title="Focused cleanup services for files that need structure."
+        body="PDF-to-Excel leads the offer. The other lanes support the practical cleanup work that often comes with it."
       />
       <section className="section">
         <div className="service-grid">
@@ -338,7 +356,7 @@ function IntakePage() {
       <SubpageHero
         eyebrow="Intake"
         title="Tell us what needs cleaning."
-        body="The public form is prepared visually for launch. Final email, upload handling, and Cloudflare routing will be connected after Michael configures the domain and email."
+        body="The intake path is ready for launch preview. Final email, upload handling, and Cloudflare routing will be connected after Michael configures the domain and email."
       />
       <section className="section intake-layout">
         <form className="intake-form" action="mailto:" method="post" encType="text/plain">
