@@ -1,0 +1,58 @@
+[
+  {
+    "absolute_path": "/Users/mdv100/Downloads/Snow Digital — Affordable Digital Services _ Product Descriptions, Social Content & More_files/bunny_character-ALoMkyV4ouEQ6PiTQ8qRSX.webp",
+    "relative_path_from_source": "Snow Digital — Affordable Digital Services _ Product Descriptions, Social Content & More_files/bunny_character-ALoMkyV4ouEQ6PiTQ8qRSX.webp",
+    "filename": "bunny_character-ALoMkyV4ouEQ6PiTQ8qRSX.webp",
+    "extension": "webp",
+    "file_size_bytes": 68998,
+    "sha256": "2ace9b5279c85db298695e832e738a2e7551bb30b17b095aff4fbd55335d6d46",
+    "likely_type": "mascot image",
+    "public_candidate": true,
+    "private_or_restricted_candidate": false,
+    "selected_for_site": true,
+    "copy_destination": "public/assets/site/bunny-character.webp",
+    "notes": "Used as secondary decorative asset only."
+  },
+  {
+    "absolute_path": "/Users/mdv100/Downloads/Snow Digital — Affordable Digital Services _ Product Descriptions, Social Content & More_files/cloud-mascot-transparent-gCQGh9ENqtAq4rLvb5jVPT.webp",
+    "relative_path_from_source": "Snow Digital — Affordable Digital Services _ Product Descriptions, Social Content & More_files/cloud-mascot-transparent-gCQGh9ENqtAq4rLvb5jVPT.webp",
+    "filename": "cloud-mascot-transparent-gCQGh9ENqtAq4rLvb5jVPT.webp",
+    "extension": "webp",
+    "file_size_bytes": 137312,
+    "sha256": "6b951d5c4a9a5f44f5f46628a7448680e722926a1bc734836bd1936d4ec86a7f",
+    "likely_type": "brand mascot image",
+    "public_candidate": true,
+    "private_or_restricted_candidate": false,
+    "selected_for_site": true,
+    "copy_destination": "public/assets/site/cloud-mascot.webp",
+    "notes": "Used as primary mascot/brand accent."
+  },
+  {
+    "absolute_path": "/Users/mdv100/Downloads/Snow Digital — Affordable Digital Services _ Product Descriptions, Social Content & More_files/fox_character-HQpYdDHSMNPe5gxek4TCYq.webp",
+    "relative_path_from_source": "Snow Digital — Affordable Digital Services _ Product Descriptions, Social Content & More_files/fox_character-HQpYdDHSMNPe5gxek4TCYq.webp",
+    "filename": "fox_character-HQpYdDHSMNPe5gxek4TCYq.webp",
+    "extension": "webp",
+    "file_size_bytes": 59944,
+    "sha256": "3b8459850d21f7600e6ded1872a517e168e28f0d5e8da08d270cd93c8b5af1d4",
+    "likely_type": "mascot image",
+    "public_candidate": true,
+    "private_or_restricted_candidate": false,
+    "selected_for_site": true,
+    "copy_destination": "public/assets/site/fox-character.webp",
+    "notes": "Used as secondary decorative asset only."
+  },
+  {
+    "absolute_path": "/Users/mdv100/Downloads/Snow Digital — Affordable Digital Services _ Product Descriptions, Social Content & More_files/winter_landscape-UnSXM8F6vr5mDkbaPSRMLz.webp",
+    "relative_path_from_source": "Snow Digital — Affordable Digital Services _ Product Descriptions, Social Content & More_files/winter_landscape-UnSXM8F6vr5mDkbaPSRMLz.webp",
+    "filename": "winter_landscape-UnSXM8F6vr5mDkbaPSRMLz.webp",
+    "extension": "webp",
+    "file_size_bytes": 15074,
+    "sha256": "dce839f2de3ffe92c4853a4abd4a73f2c4f6cabddc37ad322b1d8eb78543b50e",
+    "likely_type": "winter landscape image",
+    "public_candidate": true,
+    "private_or_restricted_candidate": false,
+    "selected_for_site": true,
+    "copy_destination": "public/assets/site/winter-landscape.webp",
+    "notes": "Used for hero panel and footer atmosphere."
+  }
+]

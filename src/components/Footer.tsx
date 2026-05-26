@@ -1,0 +1,34 @@
+import { Mail } from "./Icons";
+
+export function Footer() {
+  return (
+    <footer className="footer">
+      <div className="footer-image" aria-hidden="true">
+        <div />
+        <img src="/assets/site/winter-landscape.webp" alt="" loading="lazy" />
+      </div>
+      <div className="footer-inner">
+        <div className="footer-top">
+          <a className="footer-brand" href="/">
+            <strong>snow</strong>
+            <em>digital</em>
+          </a>
+          <nav aria-label="Footer navigation">
+            <a href="/services">Services</a>
+            <a href="/services/pdf-to-excel">PDF-to-Excel</a>
+            <a href="/privacy">Privacy</a>
+            <a href="/terms">Terms</a>
+          </nav>
+          <a className="footer-mail" href="/intake">
+            <Mail />
+            Intake details
+          </a>
+        </div>
+        <div className="footer-bottom">
+          <p>Snow Digital Services</p>
+          <p>© 2026 Snow Digital Services. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  );
+}
