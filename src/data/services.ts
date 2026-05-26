@@ -14,8 +14,8 @@ export const services: Service[] = [
     title: "Product description cleanup",
     shortTitle: "Product copy",
     description:
-      "Polish product descriptions so listings read clearly, consistently, and ready for storefront publishing.",
-    turnaround: "Great for stores and catalogs",
+      "Clear, engaging descriptions for your online store.",
+    turnaround: "Product Descriptions",
     href: "/services/product-descriptions",
     accent: "pink"
   },
@@ -24,8 +24,8 @@ export const services: Service[] = [
     title: "Social content packs",
     shortTitle: "Social content",
     description:
-      "Simple caption sets and campaign prompts for launches, promos, product drops, and weekly posting needs.",
-    turnaround: "Clean copy without the blank page",
+      "Ready-to-post captions and content ideas.",
+    turnaround: "Social Content",
     href: "/services/social-content",
     accent: "blue"
   },
@@ -34,18 +34,18 @@ export const services: Service[] = [
     title: "Landing page copy",
     shortTitle: "Landing copy",
     description:
-      "Sharper headlines, section copy, calls to action, and plain-English positioning for focused launch pages.",
-    turnaround: "Best for focused offers",
+      "Headlines and page copy for focused offers.",
+    turnaround: "Landing Page Copy",
     href: "/services/landing-page-copy",
     accent: "mint"
   },
   {
     slug: "pdf-to-excel",
-    title: "Data & document cleanup",
+    title: "Data & documents",
     shortTitle: "Data cleanup",
     description:
-      "Turn PDFs, scanned tables, invoices, lists, and reports into clean spreadsheets with organized rows and clear column labels.",
-    turnaround: "Practical file cleanup",
+      "Messy spreadsheets and PDFs transformed into clean files.",
+    turnaround: "Data & Documents",
     href: "/services/pdf-to-excel",
     accent: "lavender"
   },
@@ -54,8 +54,8 @@ export const services: Service[] = [
     title: "Invoice extraction",
     shortTitle: "Invoices",
     description:
-      "Pull invoice numbers, vendors, dates, totals, and line items into rows you can review, filter, and share.",
-    turnaround: "Great for recurring admin work",
+      "Invoice details organized into useful rows.",
+    turnaround: "Invoice Extraction",
     href: "/services/invoice-extraction",
     accent: "peach"
   },
@@ -64,8 +64,8 @@ export const services: Service[] = [
     title: "Spreadsheet cleanup",
     shortTitle: "Spreadsheets",
     description:
-      "Clean labels, remove obvious duplicates, normalize formatting, and make messy sheets easier to work with.",
-    turnaround: "Ideal before sharing or importing",
+      "Cleaner sheets that are easier to use and share.",
+    turnaround: "Spreadsheet Cleanup",
     href: "/services/spreadsheet-cleanup",
     accent: "blue"
   }

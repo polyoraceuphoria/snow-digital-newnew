@@ -5,7 +5,7 @@ import { PricingCard } from "./components/PricingCard";
 import { SectionDivider } from "./components/SectionDivider";
 import { ServiceCard } from "./components/ServiceCard";
 import { assetUrl, routeUrl } from "./data/assets";
-import { pdfPricing, pricing, services } from "./data/services";
+import { pdfPricing, services } from "./data/services";
 import type React from "react";
 
 const requestEmail = "hello@workwithsnow.com";
@@ -45,11 +45,11 @@ function Hero() {
   return (
     <section className="hero">
       <div className="hero-copy">
-        <p className="section-label">Friendly digital marketing studio</p>
-        <h1>Affordable digital support that makes your business look ready.</h1>
+        <p className="section-label">Your friendly digital studio</p>
+        <h1>Digital work, beautifully delivered.</h1>
         <p className="hero-lede">
-          Snow Digital Services helps with product descriptions, social content, landing page copy,
-          and tidy data cleanup so your next launch, listing, or handoff feels polished.
+          Product descriptions, social content, data organization, and simple launch copy for small
+          businesses that need polished work without the fuss.
         </p>
         <div className="hero-actions">
           <a className="button primary" href={routeUrl("/intake")}>
@@ -59,9 +59,7 @@ function Hero() {
             View services
           </a>
         </div>
-        <p className="microcopy">
-          Clear scope. Warm copy. Clean files. No overcomplicated agency process.
-        </p>
+        <p className="microcopy">Fast, friendly, and clearly scoped.</p>
       </div>
       <div className="hero-art" aria-label="Snow Digital winter illustration">
         <img className="cloud-float" src={assetUrl("assets/site/cloud-mascot.webp")} alt="" />
@@ -78,37 +76,15 @@ function Hero() {
   );
 }
 
-function ConversionStrip() {
-  const items = [
-    ["Launch-ready copy", "Product descriptions, captions, and landing page sections shaped for real buyers."],
-    ["Clean delivery", "Files, copy, and content are organized so they are easier to publish or hand off."],
-    ["Simple scope", "You send the need, the source material, and the desired output. Snow keeps it clear."]
-  ];
-  return (
-    <section className="conversion-strip" aria-label="Service standards">
-      {items.map(([title, body]) => (
-        <article key={title}>
-          <strong>{title}</strong>
-          <p>{body}</p>
-        </article>
-      ))}
-    </section>
-  );
-}
-
 function Home() {
   return (
     <PageShell>
       <Hero />
-      <ConversionStrip />
       <section className="section">
         <div className="section-heading">
           <p className="section-label">What We Do</p>
-          <h2>Digital marketing help without the heavy agency process.</h2>
-          <p>
-            Snow handles practical digital work for small businesses, sellers, creators, and busy
-            operators who need clean copy, clean content, and clean files.
-          </p>
+          <h2>The Magic Workshop</h2>
+          <p>Simple services. Clear delivery. No jargon.</p>
         </div>
         <div className="service-grid">
           {services.map((service, index) => (
@@ -117,52 +93,8 @@ function Home() {
         </div>
       </section>
       <SectionDivider />
-      <section className="section feature-section">
-        <div className="feature-copy">
-          <p className="section-label">The Studio Lane</p>
-          <h2>Product pages, posts, and files that feel ready to ship.</h2>
-          <p>
-            Bring the messy notes, product details, launch idea, or source document. Snow Digital
-            turns it into a cleaner digital deliverable that is easier to publish, share, upload, or
-            hand to a client.
-          </p>
-          <ul className="check-list">
-            {[
-              "Product descriptions made clear and consistent.",
-              "Social captions shaped for promos, launches, and weekly posts.",
-              "Landing page copy organized around the offer and CTA.",
-              "Messy PDFs, invoices, and spreadsheets cleaned into usable formats.",
-              "Unclear source details flagged instead of invented."
-            ].map((item) => (
-              <li key={item}>
-                <Check />
-                {item}
-              </li>
-            ))}
-          </ul>
-          <a className="button primary" href={routeUrl("/services")}>
-            Explore services
-          </a>
-        </div>
-        <div className="feature-art">
-          <img src={assetUrl("assets/site/fox-character.webp")} alt="" loading="lazy" />
-          <img src={assetUrl("assets/site/bunny-character.webp")} alt="" loading="lazy" />
-        </div>
-      </section>
-      <SectionDivider cloud />
-      <section className="section soft-section">
-        <div className="section-heading">
-          <p className="section-label">Pricing Preview</p>
-          <h2>Small-business friendly starting points.</h2>
-          <p>Every project is scoped before work begins. Larger batches, rush work, or custom formats may need a custom quote.</p>
-        </div>
-        <div className="pricing-grid">
-          {pricing.map((plan, index) => (
-            <PricingCard key={plan.name} {...plan} featured={index === 1} />
-          ))}
-        </div>
-      </section>
       <ProcessSection />
+      <StudioNote />
       <IntakeCTA />
     </PageShell>
   );
@@ -170,17 +102,15 @@ function Home() {
 
 function ProcessSection() {
   const steps = [
-    ["01", "Send the need", "Share the product, offer, file, or content task."],
-    ["02", "Confirm scope", "Deliverable, format, deadline, and revision expectations are clarified first."],
-    ["03", "Build the deliverable", "Copy, content, or cleanup work is shaped into something usable."],
-    ["04", "Review and deliver", "The finished work is checked before it is sent back."],
-    ["05", "Request revisions", "If something in scope was missed, it gets corrected."]
+    ["01", "Tell us what you need", "Send the project details."],
+    ["02", "We work the magic", "Copy, content, or files get cleaned up."],
+    ["03", "You get polished results", "Ready to post, publish, upload, or share."]
   ];
   return (
     <section className="section">
       <div className="section-heading">
         <p className="section-label">How It Works</p>
-        <h2>Simple, scoped, reviewed.</h2>
+        <h2>Easy as 1, 2, 3.</h2>
       </div>
       <div className="process-grid">
         {steps.map(([number, title, body]) => (
@@ -195,15 +125,34 @@ function ProcessSection() {
   );
 }
 
+function StudioNote() {
+  return (
+    <section className="section feature-section compact-feature">
+      <div className="feature-copy">
+        <p className="section-label">Who We Are</p>
+        <h2>Small, warm, and useful.</h2>
+        <p>
+          Snow Digital Services brings a little care to everyday digital work: product pages,
+          captions, spreadsheets, PDFs, and launch copy.
+        </p>
+        <a className="button secondary" href={routeUrl("/services")}>
+          See services
+        </a>
+      </div>
+      <div className="feature-art">
+        <img src={assetUrl("assets/site/fox-character.webp")} alt="" loading="lazy" />
+        <img src={assetUrl("assets/site/bunny-character.webp")} alt="" loading="lazy" />
+      </div>
+    </section>
+  );
+}
+
 function IntakeCTA() {
   return (
     <section className="final-cta">
       <Sparkles />
-      <h2>Have a product, post, page, or file that needs polish?</h2>
-      <p>
-        Send the source material and the result you want. You will get a clear next step before any
-        work begins.
-      </p>
+      <h2>Ready to get started?</h2>
+      <p>Say hello and let’s make something beautiful.</p>
       <a className="button primary" href={routeUrl("/intake")}>
         Start a project
       </a>
@@ -216,8 +165,8 @@ function ServicesPage() {
     <PageShell>
       <SubpageHero
         eyebrow="Services"
-        title="Affordable digital marketing services, beautifully delivered."
-        body="Product descriptions, social content, landing page copy, and data cleanup for businesses that need polished digital work without a heavy agency process."
+        title="The Magic Workshop"
+        body="Simple services, beautifully delivered."
       />
       <section className="section">
         <div className="service-grid">
