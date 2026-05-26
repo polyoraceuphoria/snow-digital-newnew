@@ -5,7 +5,7 @@ import { PricingCard } from "./components/PricingCard";
 import { SectionDivider } from "./components/SectionDivider";
 import { ServiceCard } from "./components/ServiceCard";
 import { assetUrl, routeUrl } from "./data/assets";
-import { pricing, services } from "./data/services";
+import { pdfPricing, pricing, services } from "./data/services";
 import type React from "react";
 
 const requestEmail = "hello@workwithsnow.com";
@@ -45,33 +45,33 @@ function Hero() {
   return (
     <section className="hero">
       <div className="hero-copy">
-        <p className="section-label">PDF-to-Excel cleanup</p>
-        <h1>Send the messy file. Get back a clean spreadsheet.</h1>
+        <p className="section-label">Friendly digital marketing studio</p>
+        <h1>Affordable digital support that makes your business look ready.</h1>
         <p className="hero-lede">
-          Snow Digital Services turns PDFs, invoices, scans, and messy spreadsheets into clean,
-          review-ready files, starting with PDF-to-Excel conversion.
+          Snow Digital Services helps with product descriptions, social content, landing page copy,
+          and tidy data cleanup so your next launch, listing, or handoff feels polished.
         </p>
         <div className="hero-actions">
-          <a className="button primary" href={routeUrl("/services/pdf-to-excel")}>
-            Start with PDF-to-Excel
+          <a className="button primary" href={routeUrl("/intake")}>
+            Start a project
           </a>
           <a className="button secondary" href={routeUrl("/services")}>
             View services
           </a>
         </div>
         <p className="microcopy">
-          Clear scope. Clean file. Unclear values flagged, not guessed.
+          Clear scope. Warm copy. Clean files. No overcomplicated agency process.
         </p>
       </div>
       <div className="hero-art" aria-label="Snow Digital winter illustration">
         <img className="cloud-float" src={assetUrl("assets/site/cloud-mascot.webp")} alt="" />
         <div className="file-card card-one">
-          <span>messy.pdf</span>
-          <strong>→ clean.xlsx</strong>
+          <span>product notes</span>
+          <strong>→ polished listing</strong>
         </div>
         <div className="file-card card-two">
-          <span>XLSX / CSV</span>
-          <strong>Ready to review</strong>
+          <span>caption ideas</span>
+          <strong>Ready to post</strong>
         </div>
       </div>
     </section>
@@ -80,9 +80,9 @@ function Hero() {
 
 function ConversionStrip() {
   const items = [
-    ["Scope first", "Page count, file type, and output format are confirmed before work starts."],
-    ["Clean delivery", "Rows, columns, labels, and obvious formatting issues are handled."],
-    ["No guessing", "Unreadable values are called out clearly for review."]
+    ["Launch-ready copy", "Product descriptions, captions, and landing page sections shaped for real buyers."],
+    ["Clean delivery", "Files, copy, and content are organized so they are easier to publish or hand off."],
+    ["Simple scope", "You send the need, the source material, and the desired output. Snow keeps it clear."]
   ];
   return (
     <section className="conversion-strip" aria-label="Service standards">
@@ -97,7 +97,6 @@ function ConversionStrip() {
 }
 
 function Home() {
-  const pdf = services[0];
   return (
     <PageShell>
       <Hero />
@@ -105,10 +104,10 @@ function Home() {
       <section className="section">
         <div className="section-heading">
           <p className="section-label">What We Do</p>
-          <h2>Clean work, clearly scoped.</h2>
+          <h2>Digital marketing help without the heavy agency process.</h2>
           <p>
-            PDF-to-Excel is the main path. The other lanes stay available for the practical cleanup
-            work that often comes with it.
+            Snow handles practical digital work for small businesses, sellers, creators, and busy
+            operators who need clean copy, clean content, and clean files.
           </p>
         </div>
         <div className="service-grid">
@@ -120,19 +119,20 @@ function Home() {
       <SectionDivider />
       <section className="section feature-section">
         <div className="feature-copy">
-          <p className="section-label">Flagship Service</p>
-          <h2>A cleaner spreadsheet without the back-and-forth.</h2>
+          <p className="section-label">The Studio Lane</p>
+          <h2>Product pages, posts, and files that feel ready to ship.</h2>
           <p>
-            Send a PDF, scan, invoice, table, or messy document. Receive a clean spreadsheet with
-            columns labeled, rows organized, and unclear values flagged.
+            Bring the messy notes, product details, launch idea, or source document. Snow Digital
+            turns it into a cleaner digital deliverable that is easier to publish, share, upload, or
+            hand to a client.
           </p>
           <ul className="check-list">
             {[
-              "Tables cleaned into spreadsheet format.",
-              "Invoices and lists organized.",
-              "Duplicates and obvious formatting issues cleaned.",
-              "Unreadable values flagged for review.",
-              "Delivery as XLSX, CSV, or Google Sheets-ready format."
+              "Product descriptions made clear and consistent.",
+              "Social captions shaped for promos, launches, and weekly posts.",
+              "Landing page copy organized around the offer and CTA.",
+              "Messy PDFs, invoices, and spreadsheets cleaned into usable formats.",
+              "Unclear source details flagged instead of invented."
             ].map((item) => (
               <li key={item}>
                 <Check />
@@ -140,8 +140,8 @@ function Home() {
               </li>
             ))}
           </ul>
-          <a className="button primary" href={routeUrl(pdf.href)}>
-            See PDF-to-Excel details
+          <a className="button primary" href={routeUrl("/services")}>
+            Explore services
           </a>
         </div>
         <div className="feature-art">
@@ -153,8 +153,8 @@ function Home() {
       <section className="section soft-section">
         <div className="section-heading">
           <p className="section-label">Pricing Preview</p>
-          <h2>Transparent starting points.</h2>
-          <p>Complex, handwritten, low-resolution, or custom-format jobs may require a custom quote.</p>
+          <h2>Small-business friendly starting points.</h2>
+          <p>Every project is scoped before work begins. Larger batches, rush work, or custom formats may need a custom quote.</p>
         </div>
         <div className="pricing-grid">
           {pricing.map((plan, index) => (
@@ -170,10 +170,10 @@ function Home() {
 
 function ProcessSection() {
   const steps = [
-    ["01", "Send the file", "Share the document and what you need back."],
-    ["02", "Confirm scope", "Page count, format, and deadline are clarified before work starts."],
-    ["03", "Clean the data", "Rows, columns, labels, and obvious formatting issues are handled."],
-    ["04", "Review and deliver", "The finished file is checked before it is sent back."],
+    ["01", "Send the need", "Share the product, offer, file, or content task."],
+    ["02", "Confirm scope", "Deliverable, format, deadline, and revision expectations are clarified first."],
+    ["03", "Build the deliverable", "Copy, content, or cleanup work is shaped into something usable."],
+    ["04", "Review and deliver", "The finished work is checked before it is sent back."],
     ["05", "Request revisions", "If something in scope was missed, it gets corrected."]
   ];
   return (
@@ -199,13 +199,13 @@ function IntakeCTA() {
   return (
     <section className="final-cta">
       <Sparkles />
-      <h2>Send one file. See the difference.</h2>
+      <h2>Have a product, post, page, or file that needs polish?</h2>
       <p>
-        Start with a PDF, invoice, scan, or messy spreadsheet. You will get a clear next step before
-        any work begins.
+        Send the source material and the result you want. You will get a clear next step before any
+        work begins.
       </p>
       <a className="button primary" href={routeUrl("/intake")}>
-        Start a request
+        Start a project
       </a>
     </section>
   );
@@ -216,8 +216,8 @@ function ServicesPage() {
     <PageShell>
       <SubpageHero
         eyebrow="Services"
-        title="Focused cleanup services for files that need structure."
-        body="PDF-to-Excel leads the offer. The other lanes support the practical cleanup work that often comes with it."
+        title="Affordable digital marketing services, beautifully delivered."
+        body="Product descriptions, social content, landing page copy, and data cleanup for businesses that need polished digital work without a heavy agency process."
       />
       <section className="section">
         <div className="service-grid">
@@ -269,7 +269,7 @@ function PdfToExcelPage() {
       </section>
       <section className="section soft-section">
         <div className="pricing-grid">
-          {pricing.map((plan, index) => (
+          {pdfPricing.map((plan, index) => (
             <PricingCard key={plan.name} {...plan} featured={index === 1} />
           ))}
         </div>
@@ -312,16 +312,69 @@ function SpreadsheetCleanupPage() {
   );
 }
 
+function ProductDescriptionsPage() {
+  return (
+    <ServiceDetailPage
+      eyebrow="Product descriptions"
+      title="Product copy that makes listings easier to trust and easier to buy."
+      body="Send product notes, specs, rough bullets, or an existing catalog. Snow Digital Services turns them into cleaner descriptions that are ready for storefronts, marketplaces, and launch pages."
+      included={[
+        "Clear product descriptions written from your source details.",
+        "Consistent tone and formatting across a small batch.",
+        "Benefit-focused copy without fake claims.",
+        "Questions flagged when source details are missing."
+      ]}
+      notIncluded="This service does not include fake reviews, unsupported performance claims, regulated product claims, or marketplace manipulation."
+    />
+  );
+}
+
+function SocialContentPage() {
+  return (
+    <ServiceDetailPage
+      eyebrow="Social content"
+      title="Caption packs and simple content ideas for launches, promos, and weekly posts."
+      body="Share the offer, audience, product details, and desired tone. Snow Digital Services creates practical, ready-to-edit captions and content prompts for small business social channels."
+      included={[
+        "Caption sets for launches, promos, reminders, and product drops.",
+        "Simple hooks and calls to action.",
+        "Tone cleanup for clearer, friendlier posts.",
+        "Reusable ideas for a short posting rhythm."
+      ]}
+      notIncluded="This service does not include fake engagement, follower growth guarantees, platform automation, or paid ad management."
+    />
+  );
+}
+
+function LandingPageCopyPage() {
+  return (
+    <ServiceDetailPage
+      eyebrow="Landing page copy"
+      title="Simple landing page copy for focused offers."
+      body="Turn rough notes into cleaner page sections: headline, supporting copy, service blocks, FAQs, and calls to action that help buyers understand what to do next."
+      included={[
+        "Headline and subheadline options.",
+        "Offer, benefit, process, and FAQ section copy.",
+        "CTA language and simple page flow.",
+        "Plain-English edits for clarity and conversion."
+      ]}
+      notIncluded="This service does not include custom development, paid ad strategy, legal review, or guaranteed conversion results."
+    />
+  );
+}
+
 function ServiceDetailPage({
   eyebrow,
   title,
   body,
-  included
+  included,
+  notIncluded
 }: {
   eyebrow: string;
   title: string;
   body: string;
   included: string[];
+  notIncluded?: string;
 }) {
   return (
     <PageShell>
@@ -341,8 +394,8 @@ function ServiceDetailPage({
         <div className="panel">
           <h2>What is not included</h2>
           <p>
-            This service does not include bookkeeping, legal review, tax advice, or guessing values
-            that cannot be read from the source file.
+            {notIncluded ??
+              "This service does not include bookkeeping, legal review, tax advice, or guessing values that cannot be read from the source file."}
           </p>
         </div>
       </section>
@@ -356,12 +409,12 @@ function IntakePage() {
     <PageShell>
       <SubpageHero
         eyebrow="Intake"
-        title="Tell us what needs cleaning."
-        body="Share the project details, file type, rough size, deadline, and the format you want back."
+        title="Tell us what you need made cleaner."
+        body="Share the project type, source material, rough size, deadline, and what the finished deliverable should look like."
       />
       <section className="section intake-layout">
         <form className="intake-form" action="mailto:" method="post" encType="text/plain">
-          {["Name", "Email", "Service needed", "File type", "Approximate page count / row count", "Deadline"].map(
+          {["Name", "Email", "Service needed", "Source material", "Approximate size", "Deadline"].map(
             (label) => (
               <label key={label}>
                 <span>{label}</span>
@@ -370,8 +423,8 @@ function IntakePage() {
             )
           )}
           <label>
-            <span>What should the final file look like?</span>
-            <textarea name="final-file" rows={4} />
+            <span>What should the finished deliverable look like?</span>
+            <textarea name="final-deliverable" rows={4} />
           </label>
           <label>
             <span>Notes</span>
@@ -397,15 +450,15 @@ function IntakePage() {
             </li>
             <li>
               <Check />
-              The format you need back: XLSX, CSV, or Google Sheets-ready.
+              The format you need back: product copy, captions, page copy, XLSX, CSV, or Google Sheets-ready.
             </li>
             <li>
               <Check />
-              Any deadline or import requirements.
+              Any deadline, platform, storefront, or import requirements.
             </li>
             <li>
               <Check />
-              Any columns that matter most.
+              Any tone, audience, column, or field details that matter most.
             </li>
           </ul>
         </aside>
@@ -455,7 +508,7 @@ function TextPage({
 }) {
   return (
     <PageShell>
-      <SubpageHero eyebrow={eyebrow} title={title} body="Plain-language launch policies for small digital cleanup projects." />
+      <SubpageHero eyebrow={eyebrow} title={title} body="Plain-language launch policies for small digital marketing and cleanup projects." />
       <section className="section text-panel">
         {paragraphs.map((paragraph) => (
           <p key={paragraph}>{paragraph}</p>
@@ -477,7 +530,7 @@ function SubpageHero({ eyebrow, title, body }: { eyebrow: string; title: string;
 
 function FAQ() {
   const faqs = [
-    ["What files are accepted?", "PDFs, scans, invoices, reports, tables, CSVs, and messy spreadsheets are good starting points."],
+    ["What projects are accepted?", "Product notes, product catalogs, rough social ideas, landing page drafts, PDFs, scans, invoices, reports, CSVs, and messy spreadsheets are good starting points."],
     ["Do you guess unclear values?", "No. Unreadable or uncertain values are flagged for review."],
     ["How do I send the file?", `Start with the intake page and email the file details to ${requestEmail}.`]
   ];
@@ -505,7 +558,7 @@ function NotFound() {
       <SubpageHero
         eyebrow="404"
         title="This page drifted off into the snow."
-        body="Head back home or start with the PDF-to-Excel service."
+        body="Head back home or start with the services page."
       />
     </PageShell>
   );
@@ -514,6 +567,9 @@ function NotFound() {
 const routes: Record<string, React.ReactNode> = {
   "/": <Home />,
   "/services": <ServicesPage />,
+  "/services/product-descriptions": <ProductDescriptionsPage />,
+  "/services/social-content": <SocialContentPage />,
+  "/services/landing-page-copy": <LandingPageCopyPage />,
   "/services/pdf-to-excel": <PdfToExcelPage />,
   "/services/invoice-extraction": <InvoiceExtractionPage />,
   "/services/spreadsheet-cleanup": <SpreadsheetCleanupPage />,

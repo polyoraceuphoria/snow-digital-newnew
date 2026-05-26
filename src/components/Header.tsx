@@ -3,7 +3,8 @@ import { assetUrl, routeUrl } from "../data/assets";
 
 const links = [
   { href: "/services", label: "Services" },
-  { href: "/services/pdf-to-excel", label: "PDF-to-Excel" },
+  { href: "/services/product-descriptions", label: "Product Copy" },
+  { href: "/services/social-content", label: "Social Content" },
   { href: "/intake", label: "Intake" }
 ];
 
@@ -25,7 +26,7 @@ export function Header() {
         ))}
       </nav>
       <a className="header-cta" href={routeUrl("/intake")}>
-        Start a request
+        Start a project
         <ArrowRight />
       </a>
     </header>

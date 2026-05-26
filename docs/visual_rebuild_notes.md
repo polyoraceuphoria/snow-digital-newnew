@@ -10,15 +10,16 @@
 
 ## Improved
 
-- Homepage now leads with the primary revenue offer: PDF-to-Excel.
+- Homepage now returns to the broader original-site direction: affordable digital marketing support.
+- PDF-to-Excel remains visible as a data/document cleanup lane instead of defining the entire company.
 - Public copy avoids fake testimonials, fake stats, unsupported team language, old portal links, and old email identity.
 - Intake page is honest about the static v1 workflow.
 - Required service, privacy, and terms routes are implemented.
 - Hyperminimal conversion pass added after initial build:
   - Reduced decorative snowfall density.
   - Converted the header into a calmer premium pill surface.
-  - Replaced broad studio language with sharper PDF-to-Excel positioning.
-  - Added a three-part service standards strip: scope first, clean delivery, no guessing.
+  - Restored broader studio language while keeping the offer concrete.
+  - Added a three-part service standards strip: launch-ready copy, clean delivery, simple scope.
   - Tightened section headlines to reduce whimsy and increase buyer clarity.
 
 ## Design Standard Notes

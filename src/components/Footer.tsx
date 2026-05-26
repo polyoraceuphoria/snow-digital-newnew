@@ -16,6 +16,8 @@ export function Footer() {
           </a>
           <nav aria-label="Footer navigation">
             <a href={routeUrl("/services")}>Services</a>
+            <a href={routeUrl("/services/product-descriptions")}>Product Copy</a>
+            <a href={routeUrl("/services/social-content")}>Social Content</a>
             <a href={routeUrl("/services/pdf-to-excel")}>PDF-to-Excel</a>
             <a href={routeUrl("/privacy")}>Privacy</a>
             <a href={routeUrl("/terms")}>Terms</a>

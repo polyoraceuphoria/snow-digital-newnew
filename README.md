@@ -2,9 +2,9 @@
 
 Public website for Snow Digital Services.
 
-Primary offer:
+Positioning:
 
-Send the messy file. Get back a clean spreadsheet.
+Affordable digital marketing support for product descriptions, social content, landing page copy, and tidy data cleanup.
 
 ## Local Setup
 
@@ -38,9 +38,9 @@ The final custom domain and email are intentionally left TBD for Michael to conf
 
 The site keeps the Snow/Manus softness while tightening the experience toward a hyperminimal, conversion-focused standard:
 
-- Clear PDF-to-Excel positioning.
+- Broader digital marketing studio positioning.
 - Minimal navigation.
-- One primary request path.
+- One primary project request path.
 - Trust built through scope, delivery, and quality standards instead of fake social proof.
 - Soft brand visuals used as accents rather than clutter.
 
