@@ -1,4 +1,5 @@
 import { Sparkles } from "./Icons";
+import { assetUrl } from "../data/assets";
 
 type SectionDividerProps = {
   cloud?: boolean;
@@ -11,7 +12,7 @@ export function SectionDivider({ cloud = false }: SectionDividerProps) {
       <span />
       <span />
       {cloud ? (
-        <img src="/assets/site/cloud-mascot.webp" alt="" />
+        <img src={assetUrl("assets/site/cloud-mascot.webp")} alt="" />
       ) : (
         <Sparkles className="divider-icon" />
       )}

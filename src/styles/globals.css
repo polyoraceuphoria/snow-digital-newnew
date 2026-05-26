@@ -336,7 +336,7 @@ h3 {
   aspect-ratio: 1;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(247, 251, 255, 0.9)),
-    url("/assets/site/winter-landscape.webp") center bottom / cover;
+    url("../assets/site/winter-landscape.webp") center bottom / cover;
   border: 1px solid rgba(168, 216, 234, 0.18);
   border-radius: 44px;
   box-shadow: var(--shadow);

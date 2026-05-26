@@ -4,6 +4,7 @@ import { Check, Sparkles } from "./components/Icons";
 import { PricingCard } from "./components/PricingCard";
 import { SectionDivider } from "./components/SectionDivider";
 import { ServiceCard } from "./components/ServiceCard";
+import { assetUrl } from "./data/assets";
 import { pricing, services } from "./data/services";
 import type React from "react";
 
@@ -63,7 +64,7 @@ function Hero() {
         </p>
       </div>
       <div className="hero-art" aria-label="Snow Digital winter illustration">
-        <img className="cloud-float" src="/assets/site/cloud-mascot.webp" alt="" />
+        <img className="cloud-float" src={assetUrl("assets/site/cloud-mascot.webp")} alt="" />
         <div className="file-card card-one">
           <span>messy.pdf</span>
           <strong>→ clean.xlsx</strong>
@@ -144,8 +145,8 @@ function Home() {
           </a>
         </div>
         <div className="feature-art">
-          <img src="/assets/site/fox-character.webp" alt="" loading="lazy" />
-          <img src="/assets/site/bunny-character.webp" alt="" loading="lazy" />
+          <img src={assetUrl("assets/site/fox-character.webp")} alt="" loading="lazy" />
+          <img src={assetUrl("assets/site/bunny-character.webp")} alt="" loading="lazy" />
         </div>
       </section>
       <SectionDivider cloud />

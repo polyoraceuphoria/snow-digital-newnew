@@ -1,4 +1,5 @@
 import { ArrowRight } from "./Icons";
+import { assetUrl } from "../data/assets";
 
 const links = [
   { href: "/services", label: "Services" },
@@ -10,7 +11,7 @@ export function Header() {
   return (
     <header className="site-header">
       <a className="brand" href="/" aria-label="Snow Digital Services home">
-        <img src="/assets/site/cloud-mascot.webp" alt="" />
+        <img src={assetUrl("assets/site/cloud-mascot.webp")} alt="" />
         <span>
           <strong>snow</strong>
           <em>digital</em>

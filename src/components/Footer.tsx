@@ -1,11 +1,12 @@
 import { Mail } from "./Icons";
+import { assetUrl } from "../data/assets";
 
 export function Footer() {
   return (
     <footer className="footer">
       <div className="footer-image" aria-hidden="true">
         <div />
-        <img src="/assets/site/winter-landscape.webp" alt="" loading="lazy" />
+        <img src={assetUrl("assets/site/winter-landscape.webp")} alt="" loading="lazy" />
       </div>
       <div className="footer-inner">
         <div className="footer-top">
