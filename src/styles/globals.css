@@ -250,7 +250,7 @@ textarea {
 .final-cta {
   margin: 0 auto;
   max-width: 1200px;
-  padding: 88px 24px;
+  padding: 108px 24px;
   position: relative;
   z-index: 3;
 }
@@ -261,6 +261,7 @@ textarea {
   grid-template-columns: minmax(0, 1fr) minmax(340px, 0.92fr);
   gap: 64px;
   min-height: 650px;
+  padding-bottom: 116px;
   padding-top: 82px;
 }
 
@@ -719,7 +720,7 @@ h3 {
 .final-cta {
   background: rgba(244, 180, 200, 0.1);
   border-radius: 44px;
-  margin-bottom: 72px;
+  margin: 24px auto 72px;
   max-width: 760px;
   padding: 46px 24px;
   text-align: center;
@@ -934,6 +935,7 @@ h3 {
 
   .hero {
     min-height: auto;
+    padding-bottom: 96px;
     padding-top: 56px;
   }
 
@@ -1011,11 +1013,13 @@ h3 {
   .subpage-hero,
   .section,
   .final-cta {
+    padding-block: 78px;
     padding-inline: 18px;
   }
 
   .hero {
     gap: 30px;
+    padding-bottom: 82px;
     padding-top: 42px;
   }
 
@@ -1064,6 +1068,10 @@ h3 {
     border-radius: 30px;
   }
 
+  .final-cta {
+    margin-top: 12px;
+  }
+
   .footer nav {
     align-items: flex-start;
     flex-direction: column;
@@ -1101,11 +1109,13 @@ h3 {
   .subpage-hero,
   .section,
   .final-cta {
+    padding-block: 66px;
     padding-inline: 14px;
   }
 
   .hero {
     gap: 24px;
+    padding-bottom: 70px;
     padding-top: 34px;
   }
 
