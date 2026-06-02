@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://snow-digital-services.pages.dev/sitemap.xml
+Sitemap: https://www.snowdigitalgroup.com/sitemap.xml
